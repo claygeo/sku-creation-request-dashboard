@@ -1,0 +1,449 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light mode (default) */
+body.light {
+  background: linear-gradient(135deg, #FFF5F7 0%, #E8F0E5 100%); /* Gradient from pastel pink to pastel green */
+  color: #333;
+}
+
+/* Dark mode */
+body.dark {
+  background: linear-gradient(135deg, #2C2C2C 0%, #1A3C34 100%); /* Dark gradient */
+  color: #E0E0E0;
+}
+
+/* Header styles */
+.header {
+  background: linear-gradient(90deg, #FFB6C1, #98FB98); /* Gradient from pastel pink to pastel green */
+  color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .header {
+  background: linear-gradient(90deg, #4A2C3A, #2A4A3A); /* Darker gradient for dark mode */
+  color: #E0E0E0;
+}
+
+.header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #E0E0E0;
+  color: #333;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+body.dark .logout-btn {
+  background-color: #555;
+  color: #E0E0E0;
+}
+
+.logout-btn:hover {
+  background-color: #D0D0D0;
+}
+
+body.dark .logout-btn:hover {
+  background-color: #666;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 50px 20px;
+  text-align: center;
+  flex: 1; /* Ensure main content takes up remaining space */
+}
+
+.main-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFB6C1; /* Pastel pink */
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .main-content h1 {
+  color: #FF8A9B; /* Slightly brighter pink for dark mode */
+}
+
+.main-content .subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+body.dark .main-content .subtitle {
+  color: #B0B0B0;
+}
+
+/* Button grid styles (Dashboard page) */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+body.dark .button-card {
+  background-color: rgba(50, 50, 50, 0.9); /* Darker background for dark mode */
+}
+
+.button-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.button-icon {
+  font-size: 30px;
+  color: #4CAF50; /* Darker green for better readability */
+  margin-bottom: 15px;
+}
+
+body.dark .button-icon {
+  color: #66BB6A; /* Slightly lighter green for dark mode */
+}
+
+.button-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+body.dark .button-card h3 {
+  color: #E0E0E0;
+}
+
+.button-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+body.dark .button-card p {
+  color: #B0B0B0;
+}
+
+/* Form styles (SubmitRequest page) */
+form {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+body.dark form {
+  background-color: rgba(50, 50, 50, 0.95);
+}
+
+form h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFB6C1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body.dark form h1 {
+  color: #FF8A9B;
+}
+
+/* Progress bar */
+.progress-container {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #E0E0E0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FFB6C1, #98FB98);
+  transition: width 0.3s ease-in-out;
+}
+
+body.dark .progress-bar {
+  background-color: #555;
+}
+
+body.dark .progress-fill {
+  background: linear-gradient(90deg, #FF8A9B, #66BB6A);
+}
+
+/* Form sections */
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+body.dark .form-section {
+  border-bottom: 1px solid #555;
+}
+
+.form-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4CAF50; /* Darker green for better readability */
+  margin-bottom: 15px;
+}
+
+body.dark .form-section h2 {
+  color: #66BB6A;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+body.dark label {
+  color: #E0E0E0;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #F9F9F9;
+  transition: border-color 0.2s;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #444;
+  border-color: #666;
+  color: #E0E0E0;
+}
+
+input:focus,
+select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+body.dark input:focus,
+body.dark select:focus {
+  border-color: #66BB6A;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+form button {
+  background: linear-gradient(90deg, #FFB6C1, #98FB98);
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+body.dark form button {
+  background: linear-gradient(90deg, #FF8A9B, #66BB6A);
+  color: #E0E0E0;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  background: linear-gradient(90deg, #E0E0E0, #D0D0D0);
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+body.dark .back-btn {
+  background: linear-gradient(90deg, #555, #666);
+  color: #E0E0E0;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Table styles (CheckStatus page) */
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+body.dark table {
+  background-color: rgba(50, 50, 50, 0.95);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark th,
+body.dark td {
+  border-bottom: 1px solid #555;
+}
+
+th {
+  background: linear-gradient(90deg, #FFB6C1, #98FB98);
+  color: #333;
+  font-weight: bold;
+}
+
+body.dark th {
+  background: linear-gradient(90deg, #FF8A9B, #66BB6A);
+  color: #E0E0E0;
+}
+
+tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
+
+body.dark tr:nth-child(even) {
+  background-color: #444;
+}
+
+tr:hover {
+  background-color: #F1F1F1;
+}
+
+body.dark tr:hover {
+  background-color: #555;
+}
+
+table button {
+  background: linear-gradient(90deg, #FFB6C1, #98FB98);
+  color: #333;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+body.dark table button {
+  background: linear-gradient(90deg, #FF8A9B, #66BB6A);
+  color: #E0E0E0;
+}
+
+table button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  width: 100%;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+body.dark .footer {
+  color: #B0B0B0;
+}
+
+/* Particle background container */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

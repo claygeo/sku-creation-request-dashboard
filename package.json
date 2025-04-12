@@ -1,0 +1,44 @@
+{
+  "name": "product-creation-dashboard",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "electron": "cross-env NODE_ENV=development electron .",
+    "dev": "npm run start & npm run electron",
+    "package": "vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.example.productcreationdashboard",
+    "win": {
+      "target": "portable"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "electron-store": "^8.1.0",
+    "emailjs-com": "^3.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-particles": "^2.12.2",
+    "react-router-dom": "^6.0.0",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.0.0",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^23.0.0",
+    "electron-builder": "^23.6.0",
+    "vite": "^4.0.0"
+  }
+}
