@@ -98,6 +98,9 @@ Submit SKU Request:
 ![image](https://github.com/user-attachments/assets/c42937d2-622a-41c7-acd3-ebbecb4230a8)
 ![image](https://github.com/user-attachments/assets/47484ec9-7e5b-44c0-ac4d-3eb359f6ec18)
 
+Request Status:
+![image](https://github.com/user-attachments/assets/8229f099-1783-4cd8-85e6-8c083e765854)
+
 ## Notes
 
 The application is tailored to Curaleaf’s SKU creation process. Ensure permission to share if making the repository public.
