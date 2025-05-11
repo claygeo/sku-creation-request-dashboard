@@ -1,6 +1,15 @@
 # Product Creation Dashboard
 
-An Electron-based desktop application built with React for submitting and tracking SKU (Stock Keeping Unit) requests, integrated with Supabase for data storage and EmailJS for email notifications. Designed to streamline SKU creation processes (potentially for Curaleaf), it features a pastel-themed UI with light/dark modes, offline support via electron-store, and a particle background for visual appeal.
+Built with React for submitting and tracking SKU (Stock Keeping Unit) requests, integrated with Supabase for data storage and EmailJS for email notifications. Designed to streamline SKU creation processes (potentially for Curaleaf), it features a pastel-themed UI with light/dark modes, offline support via electron-store, and a particle background for visual appeal.
+
+ ## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Database Setup](#database-setup)
+- [Visuals](#visuals)
+- [Notes](#notes)
 
 ## Features
 
@@ -20,17 +29,17 @@ An Electron-based desktop application built with React for submitting and tracki
 
 ## Setup
 
-1. Clone the Repository:
+1. Clone the Repository: 
 git clone https://github.com/your-username/product-creation-dashboard.git
 cd product-creation-dashboard
 
-2. Install Dependencies:
+2. Install Dependencies: 
 npm install
 
 
 3. Set Up Supabase:
 - Create a Supabase project and obtain the URL and anon key.
-- Create the sku_requests table using the following SQL:
+- Create the sku_requests table using the following SQL: 
   CREATE TABLE sku_requests (
     id BIGINT PRIMARY KEY,
     date_requested DATE,
@@ -57,24 +66,37 @@ npm install
     updated_at TIMESTAMP
 );
 
-- Create a src/utils/supabase.js file with your Supabase client:
+- Create a src/utils/supabase.js file with your Supabase client: 
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = 'your_supabase_url';
 const supabaseKey = 'your_supabase_anon_key';
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
-4. Configure EmailJS:
+4. Configure EmailJS: 
 - Create an EmailJS account and obtain your Service ID, Template ID, and User ID.
 - Update SubmitRequest.jsx with your EmailJS credentials:
 await emailjs.send('your_service_id', 'your_template_id', emailParams, 'your_user_id');
 
-5. Run the Application:
-- Development mode (starts Vite and Electron):
+5. Run the Application: 
+- Development mode (starts Vite): 
 npm run dev
-- Build for production (creates a portable Windows executable):
+- Build for production (creates a portable Windows executable): 
 npm run package
 The output will be in the dist/ folder.
+
+## Visuals
+
+Main Interface: 
+![image](https://github.com/user-attachments/assets/e861b2f5-2b60-448c-8c3c-4aa1096f544a)
+
+Dark mode: 
+![image](https://github.com/user-attachments/assets/8e32a987-4db8-48cb-a6f0-e44feef24a2f)
+
+Submit SKU Request:
+![image](https://github.com/user-attachments/assets/aff3cbd2-b4d9-404c-a96c-eb7f4529436d)
+![image](https://github.com/user-attachments/assets/c42937d2-622a-41c7-acd3-ebbecb4230a8)
+![image](https://github.com/user-attachments/assets/47484ec9-7e5b-44c0-ac4d-3eb359f6ec18)
 
 ## Notes
 
