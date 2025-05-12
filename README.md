@@ -30,7 +30,7 @@ Built with React for submitting and tracking SKU (Stock Keeping Unit) requests, 
 ## Setup
 
 1. Clone the Repository: 
-git clone https://github.com/claygeo/sku-creation-request-dashboard
+git clone https://github.com/claygeo/sku-creation-request-dashboard.gt
 
 2. Navigate to the Project Directory: cd product-creation-dashboard
 
