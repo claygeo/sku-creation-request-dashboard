@@ -30,14 +30,13 @@ Built with React for submitting and tracking SKU (Stock Keeping Unit) requests, 
 ## Setup
 
 1. Clone the Repository: 
-git clone https://github.com/your-username/product-creation-dashboard.git
-cd product-creation-dashboard
+git clone https://github.com/claygeo/sku-creation-request-dashboard
 
-2. Install Dependencies: 
-npm install
+2. Navigate to the Project Directory: cd product-creation-dashboard
 
+3. Install Dependencies: npm install
 
-3. Set Up Supabase:
+4. Set Up Supabase:
 - Create a Supabase project and obtain the URL and anon key.
 - Create the sku_requests table using the following SQL: 
   CREATE TABLE sku_requests (
